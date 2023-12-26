@@ -8,9 +8,8 @@ body {
   height: 100vh;
   background: linear-gradient(
     200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
+    #10c000 -29.09%,
+    #222222 129.35%
   );
   font-family: sans-serif;
   overflow-y: hidden;
@@ -59,4 +58,85 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+}
+
+.chat-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.chat-header {
+  width: 100%;
+  text-align: center;
+}
+
+.chat-log-wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-log-message-sent, .chat-log-message-recieved {
+  margin-top: 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.chat-log-message-sent {
+  justify-content: right;
+  text-align: right;
+}
+.chat-log-message-recieved {
+  justify-content: left;
+  text-align: left;
+}
+.chat-log-message-content {
+  width: calc(100% - 48px);
+  background: white;
+  color: black;
+}
+
+.chat-input-wrapper {
+  margin-top: 4px;
+  overflow: hidden;
+  background: white;
+  color: black;
+  min-height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat-input {
+  overflow-y: auto;
+  background: transparent;
+  width: calc(100% - 48px);
+  color: inherit;
+  border: none;
+  height: 100%;
+  resize: none;
+}
+.chat-send {
+  background: transparent;
+  width: 48px;
+  color: inherit;
+  border: none;
+  height: 100%;
+  padding: none;
+  margin: none;
+  appearance: none;
+  font-size: 1.3rem;
+}
+
+.chat-keyboard {
+  height: 300px;
 }
